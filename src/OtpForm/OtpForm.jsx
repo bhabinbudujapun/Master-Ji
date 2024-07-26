@@ -1,4 +1,5 @@
 import "./StyleOtpForm.css";
+import chai from "../images/chai.png";
 
 function OtpForm() {
   return (
@@ -6,7 +7,7 @@ function OtpForm() {
       <h1 className="flex items-center justify-center text-5xl font-bold text-white mt-8">
         Chai aur Code
       </h1>
-      <div className="relative flex flex-col justify-center overflow-hidden py-12">
+      <div className="relative flex flex-col justify-center overflow-hidden py-6">
         <div className="relative bg-white px-6 pt-10 pb-9 shadow-xl mx-auto w-full max-w-lg rounded-2xl">
           <div className="mx-auto flex w-full max-w-md flex-col space-y-16">
             <div className="flex flex-col items-center justify-center text-center space-y-2">
@@ -99,6 +100,9 @@ function OtpForm() {
             </div>
           </div>
         </div>
+      </div>
+      <div className="flex flex-row justify-end mx-5">
+        <img src={chai} alt="chai" className="w-20 rounded-md	" />
       </div>
     </div>
   );
