@@ -28,37 +28,56 @@ function OtpForm() {
                     <div className="w-16 h-16">
                       <input
                         className="w-full h-full flex flex-col items-center justify-center text-center px-5 outline-none rounded-xl border border-gray-200 text-lg bg-[#DBE2EF] focus:ring-1 ring-blue-700"
-                        type="number"
-                        name=""
-                        id=""
+                        type="text" // Changed from 'number' to 'text' to handle input validation
+                        maxlength="1" // Limit input to 1 character
+                        onInput={(e) => {
+                          e.target.value = e.target.value.replace(
+                            /[^0-9]/g,
+                            ""
+                          ); // Allow only digits
+                        }}
                       />
                     </div>
                     <div className="w-16 h-16">
                       <input
                         className="w-full h-full flex flex-col items-center justify-center text-center px-5 outline-none rounded-xl border border-gray-200 text-lg bg-[#DBE2EF] focus:ring-1 ring-blue-700"
-                        type="number"
-                        name=""
-                        id=""
+                        type="text" // Changed from 'number' to 'text' to handle input validation
+                        maxlength="1" // Limit input to 1 character
+                        onInput={(e) => {
+                          e.target.value = e.target.value.replace(
+                            /[^0-9]/g,
+                            ""
+                          ); // Allow only digits
+                        }}
                       />
                     </div>
                     <div className="w-16 h-16">
                       <input
                         className="w-full h-full flex flex-col items-center justify-center text-center px-5 outline-none rounded-xl border border-gray-200 text-lg bg-[#DBE2EF] focus:ring-1 ring-blue-700"
-                        type="number"
-                        name=""
-                        id=""
+                        type="text" // Changed from 'number' to 'text' to handle input validation
+                        maxlength="1" // Limit input to 1 character
+                        onInput={(e) => {
+                          e.target.value = e.target.value.replace(
+                            /[^0-9]/g,
+                            ""
+                          ); // Allow only digits
+                        }}
                       />
                     </div>
                     <div className="w-16 h-16">
                       <input
                         className="w-full h-full flex flex-col items-center justify-center text-center px-5 outline-none rounded-xl border border-gray-200 text-lg bg-[#DBE2EF] focus:ring-1 ring-blue-700"
-                        type="number"
-                        name=""
-                        id=""
+                        type="text" // Changed from 'number' to 'text' to handle input validation
+                        maxlength="1" // Limit input to 1 character
+                        onInput={(e) => {
+                          e.target.value = e.target.value.replace(
+                            /[^0-9]/g,
+                            ""
+                          ); // Allow only digits
+                        }}
                       />
                     </div>
                   </div>
-
                   <div className="flex flex-col space-y-5">
                     <div>
                       <button className="flex flex-row items-center justify-center text-center w-full border rounded-xl outline-none py-5 bg-[#112D4E] border-none text-white text-sm shadow-sm">
