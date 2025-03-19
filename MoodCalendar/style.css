@@ -1,0 +1,247 @@
+   :root {
+       --primary-color: #4a6fa5;
+       --background-color: #f9f9f9;
+       --card-background: #ffffff;
+       --border-color: #e0e0e0;
+       --happy-color: #66bb6a;
+       --good-color: #90caf9;
+       --neutral-color: #fff59d;
+       --sad-color: #ffcc80;
+       --terrible-color: #ef9a9a;
+   }
+
+   * {
+       margin: 0;
+       padding: 0;
+       box-sizing: border-box;
+       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   }
+
+   body {
+       background-color: var(--background-color);
+       color: #333;
+       padding: 20px;
+   }
+
+   .container {
+       max-width: 1000px;
+       margin: 0 auto;
+   }
+
+   header {
+       text-align: center;
+       margin-bottom: 30px;
+   }
+
+   h1 {
+       color: var(--primary-color);
+       margin-bottom: 10px;
+   }
+
+   .month-selector {
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       margin-bottom: 20px;
+       background-color: var(--card-background);
+       padding: 15px;
+       border-radius: 8px;
+       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+   }
+
+   .month-selector button {
+       background-color: var(--primary-color);
+       color: white;
+       border: none;
+       border-radius: 4px;
+       padding: 8px 15px;
+       cursor: pointer;
+       transition: background-color 0.3s;
+   }
+
+   .month-selector button:hover {
+       background-color: #3a5a80;
+   }
+
+   .month-title {
+       font-size: 1.2rem;
+       font-weight: bold;
+   }
+
+   .calendar {
+       background-color: var(--card-background);
+       border-radius: 8px;
+       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+       overflow: hidden;
+   }
+
+   .weekdays {
+       display: grid;
+       grid-template-columns: repeat(7, 1fr);
+       background-color: var(--primary-color);
+       color: white;
+       padding: 10px 0;
+       text-align: center;
+       font-weight: bold;
+   }
+
+   .days {
+       display: grid;
+       grid-template-columns: repeat(7, 1fr);
+       gap: 1px;
+       background-color: var(--border-color);
+   }
+
+   .day {
+       aspect-ratio: 1/1;
+       background-color: var(--card-background);
+       padding: 10px;
+       position: relative;
+       cursor: pointer;
+       transition: transform 0.2s, box-shadow 0.2s;
+   }
+
+   .day:hover {
+       transform: translateY(-2px);
+       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   }
+
+   .day-number {
+       position: absolute;
+       top: 5px;
+       left: 5px;
+       font-size: 0.8rem;
+       color: #777;
+   }
+
+   .mood {
+       width: 80%;
+       height: 80%;
+       border-radius: 50%;
+       margin: 10% auto;
+       transition: transform 0.3s ease;
+   }
+
+   .mood:hover {
+       transform: scale(1.1);
+   }
+
+   .mood-happy {
+       background-color: var(--happy-color);
+   }
+
+   .mood-good {
+       background-color: var(--good-color);
+   }
+
+   .mood-neutral {
+       background-color: var(--neutral-color);
+   }
+
+   .mood-sad {
+       background-color: var(--sad-color);
+   }
+
+   .mood-terrible {
+       background-color: var(--terrible-color);
+   }
+
+   .day.empty {
+       background-color: #f0f0f0;
+       cursor: default;
+   }
+
+   .day.empty:hover {
+       transform: none;
+       box-shadow: none;
+   }
+
+   .day.today {
+       border: 2px solid var(--primary-color);
+   }
+
+   .mood-selector {
+       display: flex;
+       justify-content: center;
+       gap: 15px;
+       margin-top: 30px;
+       padding: 15px;
+       background-color: var(--card-background);
+       border-radius: 8px;
+       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+   }
+
+   .mood-option {
+       width: 40px;
+       height: 40px;
+       border-radius: 50%;
+       cursor: pointer;
+       transition: transform 0.3s ease;
+   }
+
+   .mood-option:hover {
+       transform: scale(1.2);
+   }
+
+   .mood-label {
+       text-align: center;
+       font-size: 0.8rem;
+       margin-top: 5px;
+   }
+
+   .statistics {
+       margin-top: 30px;
+       background-color: var(--card-background);
+       border-radius: 8px;
+       padding: 20px;
+       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+   }
+
+   .stats-title {
+       margin-bottom: 15px;
+       color: var(--primary-color);
+       font-size: 1.2rem;
+   }
+
+   .mood-distribution {
+       display: flex;
+       align-items: center;
+       margin-bottom: 20px;
+   }
+
+   .mood-count {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       margin-right: 20px;
+   }
+
+   .mood-circle {
+       width: 30px;
+       height: 30px;
+       border-radius: 50%;
+       margin-bottom: 5px;
+   }
+
+   .count {
+       font-weight: bold;
+   }
+
+   @media (max-width: 768px) {
+       .days {
+           grid-template-columns: repeat(7, 1fr);
+       }
+
+       .day {
+           padding: 5px;
+       }
+
+       .day-number {
+           font-size: 0.7rem;
+       }
+
+       .mood-option {
+           width: 30px;
+           height: 30px;
+       }
+   }
