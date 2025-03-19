@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mood Calendar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Mood Calendar</h1>
+            <p>Track your mood patterns over time</p>
+        </header>
+
+        <div class="month-selector">
+            <button id="prev-month">&lt; Previous</button>
+            <div class="month-title">March 2025</div>
+            <button id="next-month">Next &gt;</button>
+        </div>
+
+        <div class="calendar">
+            <div class="weekdays">
+                <div>Sun</div>
+                <div>Mon</div>
+                <div>Tue</div>
+                <div>Wed</div>
+                <div>Thu</div>
+                <div>Fri</div>
+                <div>Sat</div>
+            </div>
+            <div class="days">
+                <!-- Empty days at start of month -->
+                <div class="day empty"></div>
+                <div class="day empty"></div>
+                <div class="day empty"></div>
+                <div class="day empty"></div>
+                <div class="day empty"></div>
+                <div class="day empty"></div>
+
+                <!-- Days with moods -->
+                <div class="day">
+                    <div class="day-number">1</div>
+                    <div class="mood mood-happy"></div>
+                </div>
+                <div class="day">
+                    <div class="day-number">2</div>
+                    <div class="mood mood-good"></div>
+                </div>
+                <div class="day">
+                    <div class="day-number">3</div>
+                    <div class="mood mood-neutral"></div>
+                </div>
+                <div class="day">
+                    <div class="day-number">4</div>
+                    <div class="mood mood-sad"></div>
+                </div>
+                <div class="day">
+                    <div class="day-number">5</div>
+                    <div class="mood mood-terrible"></div>
+                </div>
+                <div class="day">
+                    <div class="day-number">6</div>
+                    <div class="mood mood-good"></div>
+                </div>
+                <div class="day">
+                    <div class="day-number">7</div>
+                    <div class="mood mood-good"></div>
+                </div>
+                <div class="day">
+                    <div class="day-number">8</div>
+                    <div class="mood mood-happy"></div>
+                </div>
+                <div class="day">
+                    <div class="day-number">9</div>
+                    <div class="mood mood-happy"></div>
+                </div>
+                <div class="day">
+                    <div class="day-number">10</div>
+                    <div class="mood mood-good"></div>
+                </div>
+                <div class="day">
+                    <div class="day-number">11</div>
+                    <div class="mood mood-neutral"></div>
+                </div>
+                <div class="day">
+                    <div class="day-number">12</div>
+                    <div class="mood mood-good"></div>
+                </div>
+                <div class="day">
+                    <div class="day-number">13</div>
+                    <div class="mood mood-good"></div>
+                </div>
+                <div class="day">
+                    <div class="day-number">14</div>
+                    <div class="mood mood-happy"></div>
+                </div>
+                <div class="day">
+                    <div class="day-number">15</div>
+                    <div class="mood mood-neutral"></div>
+                </div>
+                <div class="day">
+                    <div class="day-number">16</div>
+                    <div class="mood mood-neutral"></div>
+                </div>
+                <div class="day">
+                    <div class="day-number">17</div>
+                    <div class="mood mood-good"></div>
+                </div>
+                <div class="day">
+                    <div class="day-number">18</div>
+                    <div class="mood mood-sad"></div>
+                </div>
+                <div class="day today">
+                    <div class="day-number">19</div>
+                </div>
+                <div class="day">
+                    <div class="day-number">20</div>
+                </div>
+                <div class="day">
+                    <div class="day-number">21</div>
+                </div>
+                <div class="day">
+                    <div class="day-number">22</div>
+                </div>
+                <div class="day">
+                    <div class="day-number">23</div>
+                </div>
+                <div class="day">
+                    <div class="day-number">24</div>
+                </div>
+                <div class="day">
+                    <div class="day-number">25</div>
+                </div>
+                <div class="day">
+                    <div class="day-number">26</div>
+                </div>
+                <div class="day">
+                    <div class="day-number">27</div>
+                </div>
+                <div class="day">
+                    <div class="day-number">28</div>
+                </div>
+                <div class="day">
+                    <div class="day-number">29</div>
+                </div>
+                <div class="day">
+                    <div class="day-number">30</div>
+                </div>
+                <div class="day">
+                    <div class="day-number">31</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mood-selector">
+            <div>
+                <div class="mood-option mood-happy"></div>
+                <div class="mood-label">Happy</div>
+            </div>
+            <div>
+                <div class="mood-option mood-good"></div>
+                <div class="mood-label">Good</div>
+            </div>
+            <div>
+                <div class="mood-option mood-neutral"></div>
+                <div class="mood-label">Neutral</div>
+            </div>
+            <div>
+                <div class="mood-option mood-sad"></div>
+                <div class="mood-label">Sad</div>
+            </div>
+            <div>
+                <div class="mood-option mood-terrible"></div>
+                <div class="mood-label">Terrible</div>
+            </div>
+        </div>
+
+        <div class="statistics">
+            <h3 class="stats-title">Monthly Statistics</h3>
+            <div class="mood-distribution">
+                <div class="mood-count">
+                    <div class="mood-circle mood-happy"></div>
+                    <div class="count">4</div>
+                    <div>Happy</div>
+                </div>
+                <div class="mood-count">
+                    <div class="mood-circle mood-good"></div>
+                    <div class="count">7</div>
+                    <div>Good</div>
+                </div>
+                <div class="mood-count">
+                    <div class="mood-circle mood-neutral"></div>
+                    <div class="count">4</div>
+                    <div>Neutral</div>
+                </div>
+                <div class="mood-count">
+                    <div class="mood-circle mood-sad"></div>
+                    <div class="count">2</div>
+                    <div>Sad</div>
+                </div>
+                <div class="mood-count">
+                    <div class="mood-circle mood-terrible"></div>
+                    <div class="count">1</div>
+                    <div>Terrible</div>
+                </div>
+            </div>
+            <p>Predominant mood this month: <strong>Good</strong></p>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
