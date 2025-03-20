@@ -15,14 +15,40 @@
             <p>Track your mood patterns over time</p>
         </header>
 
+        <div class="view-toggle">
+            <button class="view-selector" id="day-view-btn">Day</button>
+            <button class="view-selector" id="week-view-btn">Week</button>
+            <button class="view-selector active" id="month-view-btn">Month</button>
+        </div>
+
         <div class="month-selector">
             <button id="prev-month">&lt; Previous</button>
-            <div class="month-title">March 2025</div>
+            <div class="month-title"></div>
             <button id="next-month">Next &gt;</button>
         </div>
 
-        <div class="calendar">
-            <div class="weekdays">
+        <!-- Day View -->
+        <div class="day-view">
+            <div class="day-header">
+                <div class="day-title">Thursday, March 20, 2025</div>
+            </div>
+            <div class="day-details">
+                <div class="day-mood">
+                    <div class="day-mood-circle mood-good"></div>
+                    <div class="day-mood-label">Good</div>
+                </div>
+                <div class="day-notes">
+                    <h4>Notes</h4>
+                    <p>Had a productive day at work. Completed the project ahead of schedule. Feeling accomplished but a
+                        bit
+                        tired.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Week View -->
+        <div class="week-view">
+            <div class="week-header">
                 <div>Sun</div>
                 <div>Mon</div>
                 <div>Tue</div>
@@ -31,127 +57,56 @@
                 <div>Fri</div>
                 <div>Sat</div>
             </div>
-            <div class="days">
-                <!-- Empty days at start of month -->
-                <div class="day empty"></div>
-                <div class="day empty"></div>
-                <div class="day empty"></div>
-                <div class="day empty"></div>
-                <div class="day empty"></div>
-                <div class="day empty"></div>
+            <div class="week-days">
+                <div class="week-day">
+                    <div class="week-day-number">14</div>
+                    <div class="mood mood-happy"></div>
+                </div>
+                <div class="week-day">
+                    <div class="week-day-number">15</div>
+                    <div class="mood mood-neutral"></div>
+                </div>
+                <div class="week-day">
+                    <div class="week-day-number">16</div>
+                    <div class="mood mood-neutral"></div>
+                </div>
+                <div class="week-day">
+                    <div class="week-day-number">17</div>
+                    <div class="mood mood-good"></div>
+                </div>
+                <div class="week-day">
+                    <div class="week-day-number">18</div>
+                    <div class="mood mood-sad"></div>
+                </div>
+                <div class="week-day">
+                    <div class="week-day-number">19</div>
+                    <div class="mood mood-neutral"></div>
+                </div>
+                <div class="week-day today">
+                    <div class="week-day-number">20</div>
+                    <div class="mood mood-good"></div>
+                </div>
+            </div>
+        </div>
 
-                <!-- Days with moods -->
-                <div class="day">
-                    <div class="day-number">1</div>
-                    <div class="mood mood-happy"></div>
+        <!-- Month View -->
+        <div class="month-view active">
+            <div class="calendar">
+                <div class="weekdays">
+                    <div>Sun</div>
+                    <div>Mon</div>
+                    <div>Tue</div>
+                    <div>Wed</div>
+                    <div>Thu</div>
+                    <div>Fri</div>
+                    <div>Sat</div>
                 </div>
-                <div class="day">
-                    <div class="day-number">2</div>
-                    <div class="mood mood-good"></div>
+                <div class="days">
+                    <!-- Empty days at start of month -->
+
+                    <!-- Days with moods -->
                 </div>
-                <div class="day">
-                    <div class="day-number">3</div>
-                    <div class="mood mood-neutral"></div>
-                </div>
-                <div class="day">
-                    <div class="day-number">4</div>
-                    <div class="mood mood-sad"></div>
-                </div>
-                <div class="day">
-                    <div class="day-number">5</div>
-                    <div class="mood mood-terrible"></div>
-                </div>
-                <div class="day">
-                    <div class="day-number">6</div>
-                    <div class="mood mood-good"></div>
-                </div>
-                <div class="day">
-                    <div class="day-number">7</div>
-                    <div class="mood mood-good"></div>
-                </div>
-                <div class="day">
-                    <div class="day-number">8</div>
-                    <div class="mood mood-happy"></div>
-                </div>
-                <div class="day">
-                    <div class="day-number">9</div>
-                    <div class="mood mood-happy"></div>
-                </div>
-                <div class="day">
-                    <div class="day-number">10</div>
-                    <div class="mood mood-good"></div>
-                </div>
-                <div class="day">
-                    <div class="day-number">11</div>
-                    <div class="mood mood-neutral"></div>
-                </div>
-                <div class="day">
-                    <div class="day-number">12</div>
-                    <div class="mood mood-good"></div>
-                </div>
-                <div class="day">
-                    <div class="day-number">13</div>
-                    <div class="mood mood-good"></div>
-                </div>
-                <div class="day">
-                    <div class="day-number">14</div>
-                    <div class="mood mood-happy"></div>
-                </div>
-                <div class="day">
-                    <div class="day-number">15</div>
-                    <div class="mood mood-neutral"></div>
-                </div>
-                <div class="day">
-                    <div class="day-number">16</div>
-                    <div class="mood mood-neutral"></div>
-                </div>
-                <div class="day">
-                    <div class="day-number">17</div>
-                    <div class="mood mood-good"></div>
-                </div>
-                <div class="day">
-                    <div class="day-number">18</div>
-                    <div class="mood mood-sad"></div>
-                </div>
-                <div class="day today">
-                    <div class="day-number">19</div>
-                </div>
-                <div class="day">
-                    <div class="day-number">20</div>
-                </div>
-                <div class="day">
-                    <div class="day-number">21</div>
-                </div>
-                <div class="day">
-                    <div class="day-number">22</div>
-                </div>
-                <div class="day">
-                    <div class="day-number">23</div>
-                </div>
-                <div class="day">
-                    <div class="day-number">24</div>
-                </div>
-                <div class="day">
-                    <div class="day-number">25</div>
-                </div>
-                <div class="day">
-                    <div class="day-number">26</div>
-                </div>
-                <div class="day">
-                    <div class="day-number">27</div>
-                </div>
-                <div class="day">
-                    <div class="day-number">28</div>
-                </div>
-                <div class="day">
-                    <div class="day-number">29</div>
-                </div>
-                <div class="day">
-                    <div class="day-number">30</div>
-                </div>
-                <div class="day">
-                    <div class="day-number">31</div>
-                </div>
+
             </div>
         </div>
 
