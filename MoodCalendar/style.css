@@ -3,11 +3,6 @@
     --background-color: #f9f9f9;
     --card-background: #ffffff;
     --border-color: #e0e0e0;
-    --happy-color: #66bb6a;
-    --good-color: #90caf9;
-    --neutral-color: #fff59d;
-    --sad-color: #ffcc80;
-    --terrible-color: #ef9a9a;
 }
 
 * {
@@ -164,29 +159,13 @@ h1 {
     transform: scale(1.1);
 }
 
-.mood-happy {
-    background-color: var(--happy-color);
-}
-
-.mood-good {
-    background-color: var(--good-color);
-}
-
-.mood-neutral {
-    background-color: var(--neutral-color);
-}
-
-.mood-sad {
-    background-color: var(--sad-color);
-}
-
-.mood-terrible {
-    background-color: var(--terrible-color);
-}
-
+.mood-happy,
+.mood-good,
+.mood-neutral,
+.mood-sad,
+.mood-terrible,
 .day.empty {
-    background-color: #f0f0f0;
-    cursor: default;
+    font-size: 60px;
 }
 
 .day.empty:hover {
@@ -222,9 +201,13 @@ h1 {
 }
 
 .mood-label {
-    text-align: center;
-    font-size: 0.8rem;
-    margin-top: 5px;
+    font-size: 3rem;
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+    margin: 10% auto;
+    transition: transform 0.3s ease;
+    cursor: pointer;
 }
 
 .statistics {
@@ -355,7 +338,7 @@ h1 {
 }
 
 .day-mood-label {
-    font-size: 1.2rem;
+    font-size: 3rem;
     font-weight: bold;
 }
 
@@ -413,5 +396,14 @@ h1 {
 
     .mood-count {
         margin: 0 10px 10px 0;
+    }
+
+    .mood-happy,
+    .mood-good,
+    .mood-neutral,
+    .mood-sad,
+    .mood-terrible,
+    .day.empty {
+        font-size: 15px;
     }
 }
